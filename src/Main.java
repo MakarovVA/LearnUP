@@ -1,32 +1,12 @@
 class Main {
+
+
     public static void main(String[] args) {
-        boolean isGreenLight = false;
 
-        int speedOfPlayer1 = 5;
-        int speedOfPlayer2 = 0;
-        int speedOfPlayer3 = 2;
-        int numberOfDropouts = 0;
-
-        if (isGreenLight) {
-            numberOfDropouts = 0;
-        } else {
-            if (speedOfPlayer1 != 0) {
-                numberOfDropouts += 1;
-            }
-            if (speedOfPlayer2 != 0) {
-                numberOfDropouts += 1;
-            }
-            if (speedOfPlayer3 != 0) {
-                numberOfDropouts += 1;
-            }
+        boolean isPlayerDroppedOut = Game.checkDropout(50);
+        System.out.println(isPlayerDroppedOut);
 
 
-        }
-        System.out.println("Количество выбывших = " + numberOfDropouts);
     }
 }
 
-// Допишите здесь логику так, что будет подсчитано и выведено
-// количество игроков, которые выбывают.
-// Если свет зелёный, то проходят все игроки (0 выбывают).
-// Если свет красный, то выбывает каждый, чья скорость не 0.
